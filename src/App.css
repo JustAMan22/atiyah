@@ -30,6 +30,15 @@
   cursor: pointer;
 }
 
+#btn-actl {
+  width: 20rem;
+  height: 3rem;
+  border-radius: 0.3rem;
+  background-color: white;
+  border: 0.15rem solid rgb(175, 252, 175);
+  color: rgb(175, 252, 175);
+}
+
 #btn-actl:hover {
   cursor: pointer;
 }
