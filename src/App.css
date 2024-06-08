@@ -27,6 +27,7 @@
   border-radius: .5rem;
   object-fit: cover;
   box-shadow: rgba(0, 0, 0, 0.363) 2.4px 2.4px 3.2px;
+  border: 0.2rem solid rgb(175, 252, 175);
 }
 
 .btn-container {
@@ -39,7 +40,7 @@
 #btn-actl {
   width: 20rem;
   height: 3rem;
-  border-radius: 10rem;
+  border-radius: 0.5rem;
   background-color: white;
   border: 0.2rem solid rgb(175, 252, 175);
   color: rgb(175, 252, 175);
@@ -51,5 +52,5 @@
 
 #btn-actl:hover {
   cursor: pointer;
-  box-shadow: rgba(175, 252, 175, 0.616) 0px 8px 50px;
+  box-shadow: rgba(122, 122, 122, 0.616) 0px 3px 23px;
 }
