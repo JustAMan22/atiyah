@@ -20,6 +20,7 @@ function App() {
 
 	return (
 		<div className="master-container">
+			<div id="main-text">atiyah's duck wallet</div>
 			<div className="img-container">
 				{image ? (
 					<img
