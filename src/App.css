@@ -6,11 +6,30 @@
   margin: 3rem 0 0 0;
 }
 
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 7rem 0 0 0;
+}
+
 .duck-pic {
   display: flex;
   justify-content: center;
   width: 30vw;
-  height: 30vh;
-  border: 1px solid black;
+  height: 50vh;
+  border-radius: .5rem;
   object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.363) 2.4px 2.4px 3.2px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 0 0;
+  cursor: pointer;
+}
+
+#btn-actl:hover {
+  cursor: pointer;
 }
