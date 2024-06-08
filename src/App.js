@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [image, setImage] = useState("");
+
+	const duckImageGetter = async () => {
+		try {
+			const res = await fetch("http://localhost:5000/duck-image");
+			if (res.ok) {
+				const result = await res.json();
+				setImage(result);
+			} else {
+				console.error("Failed to fetch duck image");
+			}
+		} catch (error) {
+			console.error("Error fetching duck image:", error);
+		}
+	};
+
+	return (
+		<div className="master-container">
+			<div className="img-container">
+				{image ? (
+					<img
+						className="duck-pic"
+						src={image.url}
+						alt="Random Duck"
+					/>
+				) : (
+					<img
+						className="duck-pic"
+						src="https://i.imgur.com/YGYibCL.jpeg"
+						alt="Default Duck"
+					/>
+				)}
+			</div>
+			<div className="btn-container">
+				<button onClick={duckImageGetter}>Click me</button>
+			</div>
+		</div>
+	);
 }
 
 export default App;
