@@ -37,7 +37,7 @@ function App() {
 				)}
 			</div>
 			<div className="btn-container">
-				<button id="btn-actl" onClick={duckImageGetter}>get new duck@</button>
+				<button id="btn-actl" onClick={duckImageGetter}>get new duck!</button>
 			</div>
 		</div>
 	);
